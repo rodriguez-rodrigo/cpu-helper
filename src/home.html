@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU Temperature</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <form id="form">
+                    <div class="mb-3">
+                        <label for="core-max-clock" class="form-label">Max Core Clock</label>
+                        <input type="number" class="form-control" id="core-max-clock" aria-describedby="core-max-clock"
+                            required>
+                        <div id="core-max-clock-help" class="form-text">Between 800MHz and 4500Mhz.</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="turbo-boost">
+                        <label class="form-check-label" for="turbo-boost">Turbo Boost</label>
+                    </div>
+                    <div class="align-end">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Offset Core</th>
+                            <th>Offset Cache</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="offset-core"></td>
+                            <td id="offset-cache"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <table class="table table-sm" id="cpu-table">
+            <col width="15%" />
+            <col width="20%" />
+            <col width="15%" />
+            <col width="15%" />
+            <col width="15%" />
+            <col width="20%" />
+            <thead>
+                <tr>
+                    <th>Core #</th>
+                    <th>Clock</th>
+                    <th>Max. Clock</th>
+                    <th>Temp.</th>
+                    <th>Max. Temp.</th>
+                    <th>Max. Temp. Clock</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

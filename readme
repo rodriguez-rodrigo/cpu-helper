@@ -1,0 +1,17 @@
+## CPUPOWER
+## Install
+sudo apt-get install -y linux-tools-common
+
+##Change frequency
+sudo cpupower frenquency-set -u 3500000
+
+---------------------------------------------------------
+
+# UNDERVOLT
+
+## Install
+sudo -H pip install undervolt
+
+## set undervolt
+sudo undervolt --core -100 --cache -100
+sudo undervolt --read
